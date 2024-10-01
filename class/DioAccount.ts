@@ -30,6 +30,7 @@ export abstract class DioAccount {
   withdraw = (valor: number): void => {
     if(this.getBalance()<valor){
       console.log('Não pode sacar')
+      return
     }
 
     if(this.validateStatus()){
